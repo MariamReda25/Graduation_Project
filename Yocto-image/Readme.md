@@ -6,7 +6,7 @@
 
 - 2️⃣ Choose YOCTO Realese : 🔗 (https://wiki.yoctoproject.org/wiki/Releases )
   
-  Release choice decision --> Kirkstone ✅
+  Release choice decision --> Kirksone ✅
   
 1- Long term support ( request for help for non-common issue
 
@@ -20,4 +20,15 @@
   
   ```git checkout kirkstone```
   
-  
+  ## 📌 Development Stage :
+
+  1️⃣ source "oe-init-build-env" script
+
+ ```source oe-init-build-env Graduation_rpi5 ```
+
+ 2️⃣ After sourcing ---> build directory.
+
+ ``` cd conf ```
+ 
+ ``` vi local.conf ```
+ 
