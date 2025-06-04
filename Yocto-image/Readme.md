@@ -1,4 +1,4 @@
-### Start to customize image for Graduation Project ###
+# Start to customize image for Graduation Project #
 
 ## 📌 Pre-Development Stage :
 
