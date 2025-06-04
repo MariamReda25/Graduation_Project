@@ -9,7 +9,9 @@
   Release choice decision --> Kirkstone ✅
   
 1- Long term support ( request for help for non-common issue
+
 2- Old since 2022 so it used in development ( search for common issues)
+
 - 
   
   
