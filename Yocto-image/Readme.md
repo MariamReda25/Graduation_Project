@@ -1,4 +1,4 @@
-## Start to customize image for Graduation Project ##
+_## Start to customize image for Graduation Project ##
 
 ## 📌 Pre-Development Stage :
 
@@ -23,12 +23,12 @@
   ## 📌 Development Stage :
 
   1️⃣ source "oe-init-build-env" script
-
- ```source oe-init-build-env Graduation_rpi5 ```
-
- 2️⃣ After sourcing ---> build directory.
-
- ``` cd conf ```
  
- ``` vi local.conf ```
+    ```source oe-init-build-env Graduation_rpi5 ```
+
+  2️⃣ After sourcing ---> build directory.
+
+  ``` cd conf ```
+ 
+  ``` vi local.conf ```
  
