@@ -8,9 +8,9 @@ _## Start to customize image for Graduation Project ##
   
   Release choice decision --> Kirksone ✅
   
-1- Long term support ( request for help for non-common issue
+   1- Long term support ( request for help for non-common issue
 
-2- Old since 2022 so it used in development ( search for common issues)
+   2- Old since 2022 so it used in development ( search for common issues)
 
 - 3️⃣ Clone Pokey: 🔗(https://github.com/yoctoproject/poky)
   
@@ -25,10 +25,5 @@ _## Start to customize image for Graduation Project ##
   1️⃣ source "oe-init-build-env" script
  
     ```source oe-init-build-env Graduation_rpi5 ```
-
-  2️⃣ After sourcing ---> build directory.
-
-  ``` cd conf ```
- 
-  ``` vi local.conf ```
+   
  
