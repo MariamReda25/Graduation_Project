@@ -12,7 +12,7 @@
 
 2- Old since 2022 so it used in development ( search for common issues)
 
-- Clone Pokey: 🔗(https://github.com/yoctoproject/poky)
+- 3️⃣ Clone Pokey: 🔗(https://github.com/yoctoproject/poky)
   
   ```git clone https://github.com/yoctoproject/poky.git```
   
