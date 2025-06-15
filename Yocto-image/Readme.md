@@ -31,4 +31,8 @@
   ![image](https://github.com/user-attachments/assets/36ca6c7f-c206-46f8-8a98-c9b574222b69)
 
    
- 
+  -- ⚙️ Raspberry Pi Board support (BSP layer) --
+  
+  ``` cd ~/poky ```
+  
+  ``` git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi ``` (this link from 🔗 https://layers.openembedded.org/layerindex/branch/kirkstone/layers/)
