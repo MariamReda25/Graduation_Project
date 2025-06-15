@@ -25,5 +25,8 @@
   1️⃣ source "oe-init-build-env" script
  
     ```source oe-init-build-env Graduation_rpi5 ```
+
+  ![image](https://github.com/user-attachments/assets/36ca6c7f-c206-46f8-8a98-c9b574222b69)
+
    
  
