@@ -94,7 +94,7 @@
           ``` DISTRO ?= "grad" ```
    3- Add Layer :
 
-       ``` cd ~/poky/Gradution-rpi5 ```
+       ```cd ~/poky/Gradution-rpi5```
 
-       ``` bitbake-layers add-layer ../meta-grad-distro ```
+       ```bitbake-layers add-layer ../meta-grad-distro```
 
