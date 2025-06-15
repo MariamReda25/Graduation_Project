@@ -137,7 +137,8 @@
 
      3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
 
-       ![image](https://github.com/user-attachments/assets/b87f504e-ad47-4eb2-8d85-0eccf407d9ae)
+     ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/ca807044-36a8-4746-841a-f1e394fbb2f6)
+    
 
      - Service files ( auto-run script after booting ) : main.service
 
@@ -157,7 +158,8 @@
 
      4- OSM Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
 
-       ![image](https://github.com/user-attachments/assets/a1a24777-373f-4efb-85e2-de90b186272c)
+      ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/e684ed67-6c12-4ab2-a720-66d4e79b3247)
+
 
        - Scripts : app.py - request.py - intialize_db.py
    
