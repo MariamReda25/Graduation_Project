@@ -36,3 +36,7 @@
   ``` cd ~/poky ```
   
   ``` git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi ``` (this link from 🔗 https://layers.openembedded.org/layerindex/branch/kirkstone/layers/)
+
+  ``` cd Graduation_rpi5 ```
+
+  ``` bitbake-layers add-layer ../meta-raspberrypi ```
