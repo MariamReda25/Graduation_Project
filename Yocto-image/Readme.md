@@ -26,6 +26,8 @@
  
     ```source oe-init-build-env Graduation_rpi5 ```
 
+  2️⃣ Start integration needed Applications and Packages using Bottom-Up approach:
+
   ![image](https://github.com/user-attachments/assets/36ca6c7f-c206-46f8-8a98-c9b574222b69)
 
    
