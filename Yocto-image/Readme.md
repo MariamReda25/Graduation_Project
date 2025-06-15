@@ -101,5 +101,72 @@
   ## Build Testing Image for raspberry pi 5 :
 
       ``` bitbake rpi-test-image ```
-  
+
+  ## Create Image Recipe for our Customized image:
+
+      Follow image recipe structure (meta-grad-distro/recipes-core/images/grad-test-image.bb)
+
+         - Include base image : ```require recipes-core/images/rpi-test-image.bb ```
+
+         - # Customization Point: IMAGE_INSTALL
+
+ 
+ ## -- ⚙️ Software Packages - Applications  ( SW layer ) --
+
+   - Integration Nano Editor :
+
+      Follow Layer Strucrure ( meta-features/recipes-cmd/nano )
+
+      ``` recipetool create -o nano_1.0.bb https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz ```
+     
+      ``` bitbake nano ```
+     
+  - Integration C++ Applications & Open Streat map scripts
+
+      create new layer : ``` mkdir meta-apps ```   in poky
+
+                        ``` bitbake-layers add-layer ../meta-apps ```  in Gradution_rpi
+
+      create recipes :
+
+     Upstreams :
+    
+     1- AWS Application recipe  (meta-apps/recipes-aws/aws/aws_1.0.bb)
+
+     2- uart Application recipe (meta-apps/recipes-uart/uart/uart_1.0.bb)
+
+     3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
+
+       ![image](https://github.com/user-attachments/assets/b87f504e-ad47-4eb2-8d85-0eccf407d9ae)
+
+     - Service files ( auto-run script after booting ) : main.service
+
+
+      - Follow recipe structure :
+
+                   # TODO 1: Documentation Varaibles ( SUMMARY - DESCRIPTION - HOME_PAGE )
+    
+                   # TODO 2: License Varaialbes      ( LICENSE - LIC_FILES_CHKSUM )
+    
+                   # TODO 3: Source Vraiables        ( SRC_URI - SRCREV - S )
+    
+                   # TODO 4 : Resolve dependancy     ( DEPENDS )
+    
+                   # TODO 5: Recipe Tasks
+
+
+     4- OSM Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
+
+       ![image](https://github.com/user-attachments/assets/a1a24777-373f-4efb-85e2-de90b186272c)
+
+       - Scripts : app.py - request.py - intialize_db.py
+   
+       - Service files ( auto-run script after booting ) : db.service - app.service
+   
+    
+ 
+
+     
+
+     
 
