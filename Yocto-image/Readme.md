@@ -129,41 +129,41 @@
 
       create recipes :
 
-     Upstreams :
+         Upstreams :
     
-     1- AWS Application recipe  (meta-apps/recipes-aws/aws/aws_1.0.bb)
+           1- AWS Application recipe  (meta-apps/recipes-aws/aws/aws_1.0.bb)
 
-     2- uart Application recipe (meta-apps/recipes-uart/uart/uart_1.0.bb)
+           2- uart Application recipe (meta-apps/recipes-uart/uart/uart_1.0.bb)
 
-     3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
+           3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
 
-     ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/ca807044-36a8-4746-841a-f1e394fbb2f6)
+              ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/ca807044-36a8-4746-841a-f1e394fbb2f6)
     
 
-     - Service files ( auto-run script after booting ) : main.service
+                - Service files ( auto-run script after booting ) : main.service
 
 
-      - Follow recipe structure :
+                - Follow recipe structure :
 
-                   # TODO 1: Documentation Varaibles ( SUMMARY - DESCRIPTION - HOME_PAGE )
+                    # TODO 1: Documentation Varaibles ( SUMMARY - DESCRIPTION - HOME_PAGE )
     
-                   # TODO 2: License Varaialbes      ( LICENSE - LIC_FILES_CHKSUM )
+                    # TODO 2: License Varaialbes      ( LICENSE - LIC_FILES_CHKSUM )
     
-                   # TODO 3: Source Vraiables        ( SRC_URI - SRCREV - S )
+                    # TODO 3: Source Vraiables        ( SRC_URI - SRCREV - S )
     
-                   # TODO 4 : Resolve dependancy     ( DEPENDS )
+                    # TODO 4 : Resolve dependancy     ( DEPENDS )
     
-                   # TODO 5: Recipe Tasks
+                    # TODO 5: Recipe Tasks
 
 
-     4- OSM Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
+           4- OSM Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
 
-      ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/e684ed67-6c12-4ab2-a720-66d4e79b3247)
+             ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/e684ed67-6c12-4ab2-a720-66d4e79b3247)
 
 
-       - Scripts : app.py - request.py - intialize_db.py
+             - Scripts : app.py - request.py - intialize_db.py
    
-       - Service files ( auto-run script after booting ) : db.service - app.service
+             - Service files ( auto-run script after booting ) : db.service - app.service
    
     
  
