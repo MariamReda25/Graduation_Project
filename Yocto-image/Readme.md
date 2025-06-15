@@ -31,65 +31,65 @@
   ![image](https://github.com/user-attachments/assets/36ca6c7f-c206-46f8-8a98-c9b574222b69)
 
    
-  -- ⚙️ Raspberry Pi Board support (BSP layer) --
+   ## -- ⚙️ Raspberry Pi Board support (BSP layer) --
   
-  ``` cd ~/poky ```
+            ``` cd ~/poky ```
   
-  ``` git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi ``` (this link from 🔗 https://layers.openembedded.org/layerindex/branch/kirkstone/layers/)
+            ``` git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi ``` (this link from 🔗 https://layers.openembedded.org/layerindex/branch/kirkstone/layers/)
 
-  ``` cd Graduation_rpi5 ```
+            ``` cd Graduation_rpi5 ```
 
-  ``` bitbake-layers add-layer ../meta-raspberrypi ```
+            ``` bitbake-layers add-layer ../meta-raspberrypi ```
   
-    📝 Edit Graduation-rpi5/conf/local.conf :
+      📝 Edit Graduation-rpi5/conf/local.conf :
 
-    1- specify machine 
+           1- specify machine 
 
-    ``` MACHINE ??= "raspberrypi5" ```
+            ``` MACHINE ??= "raspberrypi5" ```
 
-    2- YOCTO Optimization
+          2- YOCTO Optimization
 
-      📌 make downloads and state-cache shared between different images :
+           📌 make downloads and state-cache shared between different images :
  
-   ``` DL_DIR ?= "${TOPDIR}/../shared_yocto_space/downloads" ```
+              ``` DL_DIR ?= "${TOPDIR}/../shared_yocto_space/downloads" ```
 
-   ``` SSTATE_DIR ?= "${TOPDIR}/../shared_yocto_space/state-cache" ```
+              ``` SSTATE_DIR ?= "${TOPDIR}/../shared_yocto_space/state-cache" ```
   
-     📌 bitbake use max.4 Cores to make 2 tasks in same time but not related to each other
+           📌 bitbake use max.4 Cores to make 2 tasks in same time but not related to each other
   
-   ``` BB_NUMBER_THREADS="4" ```
+               ``` BB_NUMBER_THREADS="4" ```
 
-     📌 bitbake use 4 cores when compile to speed up compilation process
+           📌 bitbake use 4 cores when compile to speed up compilation process
   
-   ```  PARALLEL_MAKE="-j 4" ```
+               ```  PARALLEL_MAKE="-j 4" ```
 
-  -- ⚙️ Distribution ( Distro layer ) --
+   ## -- ⚙️ Distribution ( Distro layer ) --
 
-    Follow structure of distribution layer (meta-grad-distro/conf/distro/grad.conf)
+    1- Follow structure of distribution layer (meta-grad-distro/conf/distro/grad.conf)
 
-    Configuration File Structure 📃:
+          Configuration File Structure 📃:
   
-       - Distribution Information
+              - Distribution Information
   
-       - SDK Information
+               - SDK Information
   
-       - Distribution Featrures :
+               - Distribution Featrures :
   
-            DISTRO_DEFAULT_DISTRO_FEATURES = Values ( SW Layers ‘apps’)
+                    DISTRO_DEFAULT_DISTRO_FEATURES = Values ( SW Layers ‘apps’)
   
-            DISTO_FEATURES = ${DISTRO_DEFAULT_DISTRO_FEATURES}
+                    DISTO_FEATURES = ${DISTRO_DEFAULT_DISTRO_FEATURES}
   
-       - Preferred for Package version ( Linux Version )
+              - Preferred for Package version ( Linux Version )
+ 
+   2- Add systemd as init process :
 
-   Add systemd as init process :
+     - Follow structure ( meta-grad-distro/conf/distro/include/systemd.inc )
 
-     Follow structure ( meta-grad-distro/conf/distro/include/systemd.inc )
-
-     Require file in grad.conf file
+     - Require file in grad.conf file
 
    📝 Return back to Edit Graduation-rpi5/conf/local.conf :
 
      📌 Specifiy distribution of image 
 
-     ``` DISTRO ?= "grad" ```
+          ``` DISTRO ?= "grad" ```
 
