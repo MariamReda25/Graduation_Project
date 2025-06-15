@@ -40,3 +40,56 @@
   ``` cd Graduation_rpi5 ```
 
   ``` bitbake-layers add-layer ../meta-raspberrypi ```
+  
+    📝 Edit Graduation-rpi5/conf/local.conf :
+
+    1- specify machine 
+
+    ``` MACHINE ??= "raspberrypi5" ```
+
+    2- YOCTO Optimization
+
+      📌 make downloads and state-cache shared between different images :
+ 
+   ``` DL_DIR ?= "${TOPDIR}/../shared_yocto_space/downloads" ```
+
+   ``` SSTATE_DIR ?= "${TOPDIR}/../shared_yocto_space/state-cache" ```
+  
+     📌 bitbake use max.4 Cores to make 2 tasks in same time but not related to each other
+  
+   ``` BB_NUMBER_THREADS="4" ```
+
+     📌 bitbake use 4 cores when compile to speed up compilation process
+  
+   ```  PARALLEL_MAKE="-j 4" ```
+
+  -- ⚙️ Distribution ( Distro layer ) --
+
+    Follow structure of distribution layer (meta-grad-distro/conf/distro/grad.conf)
+
+    Configuration File Structure 📃:
+  
+       - Distribution Information
+  
+       - SDK Information
+  
+       - Distribution Featrures :
+  
+            DISTRO_DEFAULT_DISTRO_FEATURES = Values ( SW Layers ‘apps’)
+  
+            DISTO_FEATURES = ${DISTRO_DEFAULT_DISTRO_FEATURES}
+  
+       - Preferred for Package version ( Linux Version )
+
+   Add systemd as init process :
+
+     Follow structure ( meta-grad-distro/conf/distro/include/systemd.inc )
+
+     Require file in grad.conf file
+
+   📝 Return back to Edit Graduation-rpi5/conf/local.conf :
+
+     📌 Specifiy distribution of image 
+
+     ``` DISTRO ?= "grad" ```
+
