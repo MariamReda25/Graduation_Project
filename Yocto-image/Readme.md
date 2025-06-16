@@ -1,4 +1,8 @@
-# Start to customize image for Graduation Project #
+# Yocto-Image  #
+
+This repository contains code and instructions for building a custom Linux distribution using Yocto Project. The resulting image can be used on embedded devices such as Raspberry Pi 5. It contains recipes for computer vision application like
+
+Damage Detection and C++ Applications. Also, it contains some recipes to install some dependecies that is required by these applications.
 
 ## 📌 Pre-Development Stage :
 
@@ -288,9 +292,95 @@
 
        ``` create-rpi-image  grad-test-image ```
 
-       # Flahing Image on SD-CARD 
+       # Flahing Image on SD-CARD : User-defined Function used to flash image (PATH: custome-scripts/flashing.sh)
 
        ``` sdcard-flashing /dev/sdx  <image> ```
+
+    ## After Booting Raspberry pi5  (in config.txt) :
+
+        - Add lines :
+  
+         ``` dtoverlay=uart2-pi5 ```
+  
+         ``` dtoverlay=uart3-pi5 ```
+
+         ``` dtoverlay=uart4-pi5 ```
+
+    ## Testing Commands :
+
+      - Check service status of customized .service files running after booting without errors :
+  
+       ``` systemctl statusu model ``` 
+  
+       ``` systemctl status db  ```
+  
+       ``` systemctl status app ```
+
+       ``` systemctl status main  ``
+
+       - View logs of customized .service files running after booting without errors :
+  
+       ``` journalctl -u model -f ``` 
+  
+       ``` journalctl -u db -f ```
+  
+       ``` journalctl -u app -f ```
+
+       ``` journalctl -u main -f ``
+
+     
+      - Test Camera capture photos or videos  :
+
+           # Testing camera photo using gstreamer 
+  
+       ``` gst-launch-1.0 v4l2src device=/dev/video0 num-buffers=1 !     'video/x-raw,width=640,height=480,framerate=30/1' !     videoconvert ! jpegenc quality=85 ! filesink location=photo.jpg ```
+
+           # Testing camera video using ffmpeg
+  
+       ``` ffmpeg -f v4l2 -input_format yuyv422 -video_size 1280x720 -i /dev/video0 -c:v copy raw_video.mkv  ```
+  
+    ## ❗️ISSUES occurred while bitbake image :
+
+         🚫 ERROR: boost-1.78.0-r0 do_package: dwarfsrcfiles failed with exit code 1 (cmd was ['dwarfsrcfiles', '/home/ubuntu/EmbeddedLinux/YOCTO/poky/Graduation_rpi5/tmp-glibc/work/cortexa76-oe-linux/boost/1.78.0-r0/package/usr/lib/
+                libboost_math_tr1l.a']):
+
+         ✅ SOLVE :
+
+            Disable dwarfsrcfiles : Since dwarfsrcfiles is not mandatory for functionality and mainly used for debugging/source linking, you can disable it safely
+
+            # add in llocal.conf
+  
+           ``` INHIBIT_PACKAGE_STRIP = "1" ```
+  
+           ``` INHIBIT_PACKAGE_DEBUG_SPLIT = "1" ```
+
+        🚫  Parsing of 3022 .bb files complete (3019 cached, 3 parsed). 4692 targets, 582 skipped, 0 masked, 0 errors.
+  
+          === Matching recipes: ===
+  
+       ffmpeg:
+  
+       meta-freescale       4.4.1 (skipped: because it has a restricted license 'commercial'. Which is not listed in LICENSE_FLAGS_ACCEPTED)
+  
+        meta                 5.0.1 (skipped: because it has a restricted license 'commercial'. Which is not listed in LICENSE_FLAGS_ACCEPTED)
+
+       ✅ SOLVE :
+
+           # add in llocal.conf
+
+           ``` LICENSE_FLAGS_ACCEPTED = "commercial" ```
+
+
+  # Limitations
+
+      Requires some familiarity with the Yocto Project and Linux system administration Builds can take a long time on slower hardware Device compatibility may vary depending on the selected options and configurations
+
+    
+  
+
+        
+
+       
 
   
 
