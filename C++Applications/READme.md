@@ -24,6 +24,9 @@ This repo. contain C++ applications are used in our systems and running in Raspb
      inform nearby drivers about this damage.
 
     ![image](https://github.com/user-attachments/assets/9888d483-9af4-4ca9-9766-1625770648a5)
+    
+    ![image](https://github.com/user-attachments/assets/9109e0f7-cd33-4d0f-a165-949067d26327)
+
 
     
 ## - Raspberry pi to Arduino 
