@@ -12,3 +12,10 @@ This repository contains the necessary components to build an Our System on Embe
 The Yocto Image folder contains the necessary configurations and recipes to build the Embedded Linux distribution customized for the System. Yocto Project is used to generate a minimal and efficient Linux image that includes all the required dependencies and components for running the system.
 
 For detailed instructions on building the Yocto image and customizing it for your target platform, please refer to the README file located within the Yocto Image folder.
+
+
+## C++ Applications 
+
+The C++ Applications folder containe used applications to build our systems (vehicle-to-vehicle & vehicle-to-cloud & Main Application & communication between raspberry pi and arduino )
+
+For detailed information and functionalities of those applications please refer to  README file located within the C++ Applications folder.
