@@ -202,7 +202,7 @@
 
   ## Create Image Recipe for our Customized image:
 
-      Follow image recipe structure (meta-grad-distro/recipes-core/images/grad-test-image.bb
+      Follow image recipe structure (meta-grad-distro/recipes-core/images/grad-test-image.bb)
       
          - Include base image  : ```require recipes-core/images/rpi-test-image.bb ```
 
@@ -275,6 +275,22 @@
        ``` IMAGE_INSTALL += "v4l-utils" ```
   
        ``` IMAGE_INSTALL += "userland" ```
+  
+   ## Creating and Flashing Image :
+
+       ``` bitbake grad-test-image ``
+
+       ``` mkdir raspi-images ``` # in ~/poky
+
+       ``` cd raspi-images ```
+
+       # create-rpi-image : User-defined Function used to create image (PATH: custome-scripts/flashing.sh)
+
+       ``` create-rpi-image  grad-test-image ```
+
+       # Flahing Image on SD-CARD 
+
+       ``` sdcard-flashing /dev/sdx  <image> ```
 
   
 
