@@ -4,7 +4,7 @@ This repo. contain C++ applications are used in our systems and running in Raspb
 ## - Main Application 
 ## - Vehicle-To-Cloud 
 
-    ![image](https://github.com/user-attachments/assets/388058b1-585a-4c38-99d1-6ce5dfc66ca8)
+  ![image](https://github.com/user-attachments/assets/906ee357-1c49-4402-b6d3-e28a239be89f)
 
 ## - Raspberry pi to ESP32 
 
