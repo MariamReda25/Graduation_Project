@@ -245,6 +245,8 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
             ``` DEPENDS = "sqlite3" ```
 
          - Add Image Features  : EXTRA_IMAGE_FEATURES
+  
+  ## 📌 Post-Development Stage :
 
   ## Add Needed Configuartions For Hardware (Raspberry pi 5) in local.conf
 
