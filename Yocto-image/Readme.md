@@ -373,7 +373,7 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
 
   # Limitations
 
-      Requires some familiarity with the Yocto Project and Linux system administration Builds can take a long time on slower hardware Device compatibility may vary depending on the selected options and configurations
+Requires some familiarity with the Yocto Project and Linux system administration Builds can take a long time on slower hardware Device compatibility may vary depending on the selected options and configurations
 
     
   
