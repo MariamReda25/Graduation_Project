@@ -128,22 +128,8 @@
                         ``` bitbake-layers add-layer ../meta-apps ```  in Gradution_rpi
 
       create recipes :
-
-         Upstreams :
     
-           1- vehicle to cloud Application recipe  (meta-apps/recipes-v2c/vehicleToCloud/vehicleToCloud.0.bb)
-
-           2- vehicle to vehicle Application recipe (meta-apps/recipes-v2v/vehicleToVehicle/vehicleToVehicle_1.0.bb)
-
-           3- Main Application recipe (meta-apps/recipes-main/mainApplication/mainApplication_1.0.bb)
-
-                ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/191f7566-a388-4583-ba7c-beb214ef17a9)
-
-
-                - Service files ( auto-run script after booting ) : main.service
-
-
-                - Follow recipe structure :
+            - Follow recipe structure :
 
                     # TODO 1: Documentation Varaibles ( SUMMARY - DESCRIPTION - HOME_PAGE )
     
@@ -156,9 +142,47 @@
                     # TODO 5: Recipe Tasks
 
 
-           4- Open street Map Scripts recipe  (meta-apps/recipes-osm/OpenstreetMap/OpenstreetMap_1.0.bb)
+           1- vehicle to cloud Application recipe  (meta-apps/recipes-v2c/vehicleToCloud/vehicleToCloud.0.bb)
 
-               ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/29ee16ad-c00b-4a00-81be-00eaabaa1120)
+           2- vehicle to vehicle Application recipe (meta-apps/recipes-v2v/vehicleToVehicle/vehicleToVehicle_1.0.bb)
+
+           3- Main Application recipe (meta-apps/recipes-main/mainApplication/mainApplication_1.0.bb)
+
+              .
+    
+              ├── mainApplication
+    
+              │   └── main.service
+    
+              └── mainApplication_1.0.bb
+
+             - Service files ( auto-run script after booting ) : main.service
+
+
+           4- Rasp-to-arduino Application recipe (meta-apps/recipes-arduino/arduino/arduino_1.0.bb)
+
+
+           5- Open street Map Scripts recipe  (meta-apps/recipes-osm/OpenstreetMap/OpenstreetMap_1.0.bb)
+
+               .
+    
+               ├── openstreetMap
+    
+               │   ├── app.py
+    
+               │   ├── app.service
+
+               │   ├── db.service
+    
+               │   ├── initialize_db.py
+    
+               │   ├── request.py
+    
+               │   └── templates
+    
+               │       └── map.html
+    
+               └── openstreetMap_1.0.bb
 
 
              - Scripts : app.py - request.py - intialize_db.py
