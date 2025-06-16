@@ -55,7 +55,7 @@
 
               ``` SSTATE_DIR ?= "${TOPDIR}/../shared_yocto_space/state-cache" ```
   
-           📌 bitbake use max.4 Cores to make 2 tasks in same time but not related to each other
+           📌 bitbake use max.4 Cores to run 4 tasks in same time but not related to each other
   
                ``` BB_NUMBER_THREADS="4" ```
 
@@ -71,9 +71,9 @@
   
               - Distribution Information
   
-               - SDK Information
+              - SDK Information
   
-               - Distribution Featrures :
+              - Distribution Featrures :
   
                     DISTRO_DEFAULT_DISTRO_FEATURES = Values ( SW Layers ‘apps’)
   
@@ -131,14 +131,14 @@
 
          Upstreams :
     
-           1- AWS Application recipe  (meta-apps/recipes-aws/aws/aws_1.0.bb)
+           1- vehicle to cloud Application recipe  (meta-apps/recipes-v2c/vehicleToCloud/vehicleToCloud.0.bb)
 
-           2- uart Application recipe (meta-apps/recipes-uart/uart/uart_1.0.bb)
+           2- vehicle to vehicle Application recipe (meta-apps/recipes-v2v/vehicleToVehicle/vehicleToVehicle_1.0.bb)
 
-           3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
+           3- Main Application recipe (meta-apps/recipes-main/mainApplication/mainApplication_1.0.bb)
 
-              ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/ca807044-36a8-4746-841a-f1e394fbb2f6)
-    
+                ![Screenshot from 2025-06-15 23-16-57](https://github.com/user-attachments/assets/191f7566-a388-4583-ba7c-beb214ef17a9)
+
 
                 - Service files ( auto-run script after booting ) : main.service
 
@@ -156,15 +156,25 @@
                     # TODO 5: Recipe Tasks
 
 
-           4- OSM Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
+           4- Open street Map Scripts recipe  (meta-apps/recipes-osm/OpenstreetMap/OpenstreetMap_1.0.bb)
 
-             ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/e684ed67-6c12-4ab2-a720-66d4e79b3247)
+               ![Screenshot from 2025-06-15 23-05-39](https://github.com/user-attachments/assets/29ee16ad-c00b-4a00-81be-00eaabaa1120)
 
 
              - Scripts : app.py - request.py - intialize_db.py
    
              - Service files ( auto-run script after booting ) : db.service - app.service
-   
+    
+    - Integration AI Model :
+
+       create new layer : ``` mkdir meta-ai ```   in poky
+
+                          ``` bitbake-layers add-layer ../meta-ai ```  in Gradution_rpi
+      
+       create recipe :
+
+          
+
     
  
 
