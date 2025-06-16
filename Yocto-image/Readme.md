@@ -246,9 +246,7 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
 
          - Add Image Features  : EXTRA_IMAGE_FEATURES
   
-  ## 📌 Post-Development Stage :
-
-  ## Add Needed Configuartions For Hardware (Raspberry pi 5) in local.conf
+   ### Add Needed Configuartions For Hardware (Raspberry pi 5) in local.conf
 
      1- UART ( Enables extra UART interfaces (UART2, UART3, UART4) on the Pi 5.)
   
@@ -270,7 +268,7 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
 
       ```` MACHINE_ESSENTIAL_EXTRA_RECOMMENDS += "kernel-module-uvcvideo" ```
   
-   ## Add Needed Packages To Use Camera ( USB Camera ) in image recipe
+    ### Add Needed Packages To Use Camera ( USB Camera ) in image recipe
 
        #Add support packages for Camera
   
@@ -282,7 +280,9 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
   
        ``` IMAGE_INSTALL += "userland" ```
   
-   ## Creating and Flashing Image :
+  ## 📌 Post-Development Stage :
+  
+    ### Creating and Flashing Image :
 
        ``` bitbake grad-test-image ``
 
@@ -298,7 +298,7 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
 
        ``` sdcard-flashing /dev/sdx  <image> ```
 
-    ## After Booting Raspberry pi5  (in config.txt) :
+     ### After Booting Raspberry pi5  (in config.txt) :
 
         - Add lines :
   
@@ -308,7 +308,7 @@ Damage Detection and C++ Applications. Also, it contains some recipes to install
 
          ``` dtoverlay=uart4-pi5 ```
 
-    ## Testing Commands :
+     ### Testing Commands :
 
       - Check service status of customized .service files running after booting without errors :
   
