@@ -197,17 +197,17 @@
       
        create recipe :
 
-       .
+          .
       
-       ├── model
+          ├── model
       
-       │   ├── model.service
+          │   ├── model.service
       
-       │   ├── model_int8_openvino_model_H-20250615T193933Z-1-001.zip
+          │   ├── model_int8_openvino_model_H-20250615T193933Z-1-001.zip
       
-       │   └── track.py
-      
-       └── model_1.0.bb
+          │   └── track.py
+       
+          └── model_1.0.bb
           
 
     
