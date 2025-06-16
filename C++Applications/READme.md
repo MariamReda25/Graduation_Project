@@ -6,8 +6,8 @@ This repo. contain C++ applications are used in our systems and running in Raspb
 ## - Raspberry pi to ESP32 
 
   - This Application is designed to send an alert message to ESP32 which exists in main vehicle using UART2 by serial port (/dev/ttyAMA2) in Raspberry pi to inform driver about road damage which
-    detected by AI Model then ESP32 send this message to another ESP32 which exist in another vehicle using ESP-NOW (simulate Vehicle-to-vehicle communication) to inform nearby drivers about this
-    damage.
+    detected by AI Model by displaying alert message on LCD then ESP32 send this message to another ESP32 which exist in another vehicle using ESP-NOW (simulate Vehicle-to-vehicle communication) to
+     inform nearby drivers about this damage.
     
 ## - Raspberry pi to Arduino 
 
