@@ -11,5 +11,5 @@ This repo. contain C++ applications are used in our systems and running in Raspb
     
 ## - Raspberry pi to Arduino 
 
-  - This Application is designed to send signal to Arduino using UART4 by serial port (/dev/ttyAMA4) in Raspberry pi which exists in main vehicle to take action ( Stop vehicle ) after detecting
+  - This Application is designed to send signal to Arduino which exists in main vehicle using UART4 by serial port (/dev/ttyAMA4) in Raspberry pi to take action ( Stop vehicle ) after detecting
      damage.
