@@ -4,9 +4,13 @@ This repo. contain C++ applications are used in our systems and running in Raspb
 ## - Main Application 
 
   - This Application is designed to continuously read GPS using UART4 by serail port(/dev/ttyAMA4) in Raspberry pi and check AI_TIRGGER File if there is data sent from AI Model which indicate there     is damage in road Then application run four threads to run other applications which is responsible to:
+    
       1- Send Alert message to driver and nearby vehicles ( Vehicle-to-vehicle)
+    
       2- Send Stop signal to vehicle
+    
       3- Send Damage information to cloud to inform government agencies (vehicle-to-cloud)
+    
       4- Update OpenStreet Map with detected damage
     
 ## - Vehicle-To-Cloud 
