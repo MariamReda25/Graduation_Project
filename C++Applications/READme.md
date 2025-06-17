@@ -15,10 +15,10 @@ This repo. contain C++ applications are used in our systems and running in Raspb
     
 ## - Vehicle-To-Cloud 
 
-    - This Applications is designed to send damage information in mail to government agencies through cloud (AWS cloud) using IOT Core and SNS services and MQTT Protocol after detecting damages 
+     This Applications is designed to send damage information in mail to government agencies through cloud (AWS cloud) using IOT Core and SNS services and MQTT Protocol after detecting damages 
       and this handle loss connection of internet by saving this Information in backup file till connection is returned 
 
-  ![image](https://github.com/user-attachments/assets/906ee357-1c49-4402-b6d3-e28a239be89f)
+   ![image](https://github.com/user-attachments/assets/906ee357-1c49-4402-b6d3-e28a239be89f)
 
 ## - Vehicle-To-Vehicle 
 
