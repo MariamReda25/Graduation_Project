@@ -1,8 +1,6 @@
 # Yocto-Image  #
 
-This repository contains code and instructions for building a custom Linux distribution using Yocto Project. The resulting image can be used on embedded devices such as Raspberry Pi 5. It contains recipes for computer vision application like
-
-Damage Detection and C++ Applications. Also, it contains some recipes to install some dependecies that is required by these applications.
+This repository contains code and instructions for building a custom Linux distribution using Yocto Project. The resulting image can be used on embedded devices such as Raspberry Pi 5. It contains recipes for computer vision application like damage detection and C++ Applications. Also, it contains some recipes to install some dependecies that is required by these applications.
 
 ## 📌 Pre-Development Stage :
 
