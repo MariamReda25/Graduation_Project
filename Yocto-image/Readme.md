@@ -280,7 +280,7 @@ This repository contains code and instructions for building a custom Linux distr
 
   ### Add Needed Packages To Use wifi in image recipe
 
-     #Add support packages for for network
+      #Add support packages for for network
   
        ``` IMAGE_INSTALL += "wpa-supplicant linux-firmware dhcpcd" ```
 
