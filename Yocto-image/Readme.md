@@ -212,13 +212,13 @@ This repository contains code and instructions for building a custom Linux distr
 
               # Add Aplications
   
-              ``` IMAGE_INSTALL += "vehicleToCloud" ```
+              ``` IMAGE_INSTALL += "v2c" ```
   
-              ``` IMAGE_INSTALL += "vehicleToVehicle" ```
+              ``` IMAGE_INSTALL += "v2v" ```
   
-              ``` IMAGE_INSTALL += "openstreetMap"  ```
+              ``` IMAGE_INSTALL += "osm"  ```
   
-              ``` IMAGE_INSTALL += "mainApplication" ```
+              ``` IMAGE_INSTALL += "main" ```
   
               ``` IMAGE_INSTALL += "model" ```
   
@@ -277,6 +277,13 @@ This repository contains code and instructions for building a custom Linux distr
        ``` IMAGE_INSTALL += "v4l-utils" ```
   
        ``` IMAGE_INSTALL += "userland" ```
+
+  ### Add Needed Packages To Use wifi in image recipe
+
+     #Add support packages for for network
+  
+       ``` IMAGE_INSTALL += "wpa-supplicant linux-firmware dhcpcd" ```
+
   
   ## 📌 Post-Development Stage :
   
