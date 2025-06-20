@@ -28,6 +28,8 @@
 
    - Includes a UNIQUE constraint to prevent duplicate entries for the same location and damage type
 
+## Run System :
+
 To make this system work properly, you would need to:
 
 First run the database script to create the SQLite database
