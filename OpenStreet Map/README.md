@@ -42,7 +42,7 @@ Finally, the client script can be run to submit damage reports
 
 ## Want to Test with Real Devices?
 If you're running this on a Raspberry Pi or want to access the app from another phone/device on the same network:
-Replace 127.0.0.1 with your local IP address in both app.py and request.py
+Replace 127.0.0.1 with your local IP address in both server.py and request.py
 
 
   
