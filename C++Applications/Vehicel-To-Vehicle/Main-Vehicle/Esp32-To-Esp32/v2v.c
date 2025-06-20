@@ -17,7 +17,6 @@ uint8_t broadcastAddress1[] = {0xCC, 0xDB, 0xA7, 0x9D, 0x08, 0x48};
 // Struct for ESP-NOW data
 typedef struct struct_message {
   char object[32];
-  char depth[16];
 } struct_message;
 
 struct_message outgoingMessage;
@@ -49,7 +48,6 @@ void setup() {
     Serial.println("Error initializing ESP-NOW");
     return;
   }
-
   esp_now_register_send_cb(DataSent);
 
   memcpy(peerInfo.peer_addr, broadcastAddress1, 6);
@@ -74,24 +72,20 @@ void loop() {
 
     // Example input: "Object 1: Pothole, Avg Depth: 0.78 meters"
     int objIndex = input.indexOf(':');
-    int depthIndex = input.indexOf("Avg Depth:");
 
-    if (objIndex != -1 && depthIndex != -1) {
-      String object = input.substring(objIndex + 1, input.indexOf(",", objIndex));
-      String depth = input.substring(depthIndex + 10);
+    if (objIndex != -1) {
+      String object = input.substring(objIndex + 1);
       object.trim();
-      depth.trim();
 
       // Show on local LCD
       lcd.clear();
       lcd.setCursor(0, 0);
-      lcd.print("Obj:" + object);  // e.g., "Pothole"
+      lcd.print("Warnning:");
       lcd.setCursor(0, 1);
-      lcd.print("Dep:" + depth);  // e.g., "Depth: 0.78 meters"
+      lcd.print(object);  
 
       // Send via ESP-NOW
       strncpy(outgoingMessage.object, object.c_str(), sizeof(outgoingMessage.object));
-      strncpy(outgoingMessage.depth, depth.c_str(), sizeof(outgoingMessage.depth));
 
       esp_now_send(broadcastAddress1, (uint8_t *)&outgoingMessage, sizeof(outgoingMessage));
 
