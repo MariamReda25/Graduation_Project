@@ -19,3 +19,9 @@ For detailed instructions on building the Yocto image and customizing it for you
 The C++ Applications folder containe used applications to build our systems (vehicle-to-vehicle & vehicle-to-cloud & Main Application & communication between raspberry pi and arduino )
 
 For detailed information and functionalities of those applications please refer to  README file located within the C++ Applications folder.
+
+## OpenStreet Map 
+
+The OpenStreet Map folder contain needed scripts ( request.py - server.py - intialize_db.py - Templates folder for map ) to plot detected damages on map using flask api and sqlit3 database fro toring damages 
+
+For detailed information about OpenStreet Map , please refer to README file within OpenStreet Map folder.
