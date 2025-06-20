@@ -135,19 +135,19 @@ This repository contains code and instructions for building a custom Linux distr
                     # TODO 5: Recipe Tasks
 
 
-           1- vehicle to cloud Application recipe  (meta-apps/recipes-v2c/vehicleToCloud/vehicleToCloud.0.bb)
+           1- vehicle to cloud Application recipe  (meta-apps/recipes-v2c/v2c/v2c_1.0.bb)
 
-           2- vehicle to vehicle Application recipe (meta-apps/recipes-v2v/vehicleToVehicle/vehicleToVehicle_1.0.bb)
+           2- vehicle to vehicle Application recipe (meta-apps/recipes-v2v/v2v/v2v_1.0.bb)
 
-           3- Main Application recipe (meta-apps/recipes-main/mainApplication/mainApplication_1.0.bb)
+           3- Main Application recipe (meta-apps/recipes-main/main/main_1.0.bb)
 
               .
     
-              ├── mainApplication
+              ├── main
     
               │   └── main.service
     
-              └── mainApplication_1.0.bb
+              └── main_1.0.bb
 
              - Service files ( auto-run script after booting ) : main.service
 
@@ -155,11 +155,11 @@ This repository contains code and instructions for building a custom Linux distr
            4- Rasp-to-arduino Application recipe (meta-apps/recipes-arduino/arduino/arduino_1.0.bb)
 
 
-           5- Open street Map Scripts recipe  (meta-apps/recipes-osm/OpenstreetMap/OpenstreetMap_1.0.bb)
+           5- Open street Map Scripts recipe  (meta-apps/recipes-osm/osm/osm_1.0.bb)
 
                .
     
-               ├── openstreetMap
+               ├── osm
     
                │   ├── app.py
     
@@ -196,7 +196,7 @@ This repository contains code and instructions for building a custom Linux distr
       
           │   ├── model.service
       
-          │   ├── model_int8_openvino_model_H-20250615T193933Z-1-001.zip
+          │   ├── model_int8_openvino_model_H
     
           │   └── track.py
        
