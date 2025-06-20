@@ -28,6 +28,12 @@
 
    - Includes a UNIQUE constraint to prevent duplicate entries for the same location and damage type
 
+## Template folder:
+
+ The templates folder is a required directory in Flask that stores all HTML files (like map.html).
+
+ The map.html file in your templates folder is used to render the interactive map, displaying road damage markers from your SQLite3 database
+
 ## Run System :
 
 To make this system work properly, you would need to:
@@ -40,7 +46,7 @@ Finally, the client script can be run to submit damage reports
 
 ## Needed Packages :
 
- pip3 install flask
+ ``` pip3 install flask ```
 
 ## Want to Test with Real Devices?
 If you're running this on a Raspberry Pi or want to access the app from another phone/device on the same network:
