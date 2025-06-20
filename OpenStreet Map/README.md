@@ -34,7 +34,7 @@ To make this system work properly, you would need to:
 
 First run the database script to create the SQLite database
 
-Then run the Flask application (app.py) to start the server
+Then run the Flask application (server.py) to start the server
 
 Finally, the client script can be run to submit damage reports
 
