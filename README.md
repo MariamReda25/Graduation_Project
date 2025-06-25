@@ -43,6 +43,10 @@ My teammates are:
 - [Ali Abdelmenam](https://github.com/aliabdelmonam)
 - [Rawan Mohamed](https://github.com/rawan-mohamed-fathy)
 
+## Contributing
+
+ Contributions to the Advanced Road safety system project are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request.
+
 
 
 
