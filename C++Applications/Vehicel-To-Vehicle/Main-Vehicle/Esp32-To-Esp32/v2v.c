@@ -12,7 +12,7 @@ LiquidCrystal lcd(19, 23, 18, 17, 16, 4);
 HardwareSerial mySerial(2); // Serial2 for UART
 
 // ESP-NOW receiver MAC address
-uint8_t broadcastAddress1[] = {0xCC, 0xDB, 0xA7, 0x9D, 0x08, 0x48};
+uint8_t broadcastAddress1[] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
 
 // Struct for ESP-NOW data
 typedef struct struct_message {
