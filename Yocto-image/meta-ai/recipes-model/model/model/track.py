@@ -1,5 +1,6 @@
-import os
-os.system(f'pip3 install --no-cache-dir "ultralytics[none]" opencv-python numpy Pillow')
+import sys
+sys.path.append('/home/root/python-packages')
+sys.path.insert(0, '/home/root/python_packages')
 
 import cv2
 from ultralytics import YOLO
