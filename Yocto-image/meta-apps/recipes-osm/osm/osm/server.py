@@ -1,5 +1,6 @@
-import os
-os.system( "pip3 install --upgrade werkzeug flask")
+import sys
+sys.path.append('/home/root/python-packages')
+sys.path.insert(0, '/home/root/python_packages')
 
 from flask import Flask, request, jsonify, render_template
 import sqlite3
