@@ -14,7 +14,7 @@ The Yocto Image folder contains the necessary configurations and recipes to buil
 For detailed instructions on building the Yocto image and customizing it for your target platform, please refer to the README file located within the Yocto Image folder.
 
 
-## C++ Applications 
+## C++ Applications
 
 The C++ Applications folder containe used applications to build our systems (vehicle-to-vehicle & vehicle-to-cloud & Main Application & communication between raspberry pi and arduino )
 
@@ -25,3 +25,25 @@ For detailed information and functionalities of those applications please refer 
 The OpenStreet Map folder contain needed scripts ( request.py - server.py - intialize_db.py - Templates folder for map ) to plot detected damages on map using flask api and sqlit3 database fro toring damages 
 
 For detailed information about OpenStreet Map , please refer to README file within OpenStreet Map folder.
+
+## Acknowledgments
+
+This project was inspired and influenced by the work of the Yocto Project community and developers. Also, it was mentored by Dr. Essam at shoubra faculty of engineering 
+
+## Contributors
+
+This project was the graduation project of a group of 7 from Faculty of Engineering, computer department, Benha University, Class of 2025.
+
+My teammates are:
+
+- [Toqa Sameh](https://github.com/Toqasameh)
+- [Nermeen Ahmed](https://github.com/nermeenahmed577)
+- [Bassant Ehab](https://github.com/basant20415)
+- [Alaa Gaber](https://github.com/alaagaber25/)
+- [Ali Abdelmenam](https://github.com/aliabdelmonam)
+- [Rawan Mohamed](https://github.com/rawan-mohamed-fathy)
+
+
+
+
+
