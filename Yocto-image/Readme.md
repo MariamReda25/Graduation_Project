@@ -313,7 +313,66 @@ This repository contains code and instructions for building a custom Linux distr
 
          ``` dtoverlay=uart4-pi5 ```
 
-     ### Testing Commands :
+    ### To make wifi auto-connect after booting follow This instructions
+
+      - nano /etc/wpa-supplicatnt.conf File:
+
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+       
+        update_config=1
+
+        network={
+       
+           ssid="YOUR_SSID"
+       
+           psk="YOUR_PASSWORD"
+       
+           key_mgmt=WPA-PSK
+        }
+ 
+    - groupadd netdev    : creates a new group named "netdev" on a Linux system.
+ 
+    -  systemctl enable dhcpcd
+   
+    -  systemctl start dhcpcd
+ 
+    -  systemctl enable wpa_supplicant
+ 
+    -  systemctl start wpa_supplicant
+ 
+    -  nano /lib/systemd/system/wpa_supplicant.service
+ 
+      [Unit]
+      Description=WPA supplicant
+      Before=network.target
+      After=dbus.service
+      Wants=network.target
+
+     [Service]
+     Type=dbus
+     BusName=fi.w1.wpa_supplicant1
+     PermissionsStartOnly=true
+     ExecStartPre=-/bin/mkdir -p /var/run/wpa_supplicant
+     ExecStartPre=/bin/chown root:netdev /var/run/wpa_supplicant
+     ExecStartPre=/bin/chmod 770 /var/run/wpa_supplicant
+     ExecStart=/usr/sbin/wpa_supplicant -u -i wlan0 -c /etc/wpa_supplicant.conf
+     ExecReload=/bin/kill -HUP $MAINPID
+
+     [Install]
+     WantedBy=multi-user.target
+     Alias=dbus-fi.w1.wpa_supplicant1.service
+
+  - systemctl disable --now systemd-resolved
+
+  - rm /etc/resolv.conf  # Remove symlink
+
+  - nano /etc/resolv.conf  # Create new file
+
+     nameserver 8.8.8.8
+     nameserver 1.1.1.1
+    
+
+   ### Testing Commands :
 
       - Check service status of customized .service files running after booting without errors :
   
@@ -345,6 +404,10 @@ This repository contains code and instructions for building a custom Linux distr
            # Testing camera video using ffmpeg
   
        ``` ffmpeg -f v4l2 -input_format yuyv422 -video_size 1280x720 -i /dev/video0 -c:v copy raw_video.mkv  ```
+
+    - Test wifi :
+
+      ping -I wlan0 google.com
   
     ## ❗️ISSUES occurred while bitbake image :
 
